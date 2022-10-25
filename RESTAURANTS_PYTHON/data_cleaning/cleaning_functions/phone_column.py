@@ -30,10 +30,9 @@ def clean_phone_column(df):
     df['phone'] = (
         df['phone1'] + ', ' + df['phone2'])
 
-    df = df.drop(columns=['phone1', 'phone2'])
+    df.drop(columns=['phone1', 'phone2'], inplace=True)
 
-    df['phone'].replace(
-        to_replace=', No number', value='', inplace=True, regex=True)
+    df['phone'].replace(to_replace=', No number', value='', inplace=True, regex=True)
 
     df['phone'].str.strip()
 
