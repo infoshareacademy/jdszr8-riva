@@ -1,6 +1,3 @@
-from multiprocessing.managers import Namespace
-
-
 def clean_name_column(df):
 
     """The function takes dataframe as an argument and return dataframe.
@@ -13,5 +10,3 @@ def clean_name_column(df):
         ['é', 'é', 'é', 'ñ', 'â', '°', 'û', 'e', '’'],
         regex=True)
     df = df.update(names)
-
-
