@@ -1,4 +1,5 @@
-from functions_to_import import *
+import pandas as pd
+from .functions_to_import import *
 
 def run_application(preferences,df:pd.DataFrame):
 
@@ -8,5 +9,6 @@ def run_application(preferences,df:pd.DataFrame):
     normalized_data=normalize_data(data_with_distance,['rate','cost','distance','votes'])
     final_data=calculate_euclidean_distance(normalized_data)
     top_10_restaurants = final_data.sort_values(by="euclidean_dist",ascending=True)[:10]
+    return top_10_restaurants
     # map=generate_map(top_10_restaurants, user_location)
     # display(map)
