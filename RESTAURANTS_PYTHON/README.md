@@ -1,11 +1,11 @@
-**Input:**
+Application that recommends restaurants in Bangalore
 
-1. cuisine
-2. kategorie ceny (tanie, srednie, drogie) 3
-3. ilosc ocen (malo, srednio, duzo) 3 kategorie lub więcej
-4. ocena (powyzej 2, powyzej 3, powyzej 4 lub uzyc symbole)
-5. opcjonalnie: lokalizacja ?
-6. opcjonalnie: ilość restauracji do wyswietlenia? np. 3 restauracje, 5, 10 itd
+The application recommends restaurants to the user based on
+- geographic location and distance
+- expected price level
+- preferred type of cuisine
+- popularity and rating level
 
-**Output:**
-top10 posortowane po odleglosci (lub po ocenie) + dodatkowa informacja
+The app was developed based on following dataset:
+<br>
+- [Bangalore restaurant dataset](https://www.kaggle.com/datasets/himanshupoddar/zomato-bangalore-restaurants)
