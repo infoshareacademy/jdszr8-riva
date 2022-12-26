@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_a94fdbcbff159655c5a406bcac27e775 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_a94fdbcbff159655c5a406bcac27e775" ></div>
+        
+</body>
+<script>    
+    
+            var map_a94fdbcbff159655c5a406bcac27e775 = L.map(
+                "map_a94fdbcbff159655c5a406bcac27e775",
+                {
+                    center: [12.978889, 77.591667],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 13,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4310110ab302404516e3f02db5e234b5 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_a94fdbcbff159655c5a406bcac27e775);
+        
+    
+            var marker_f559c8511d073547d8d49ecd4de1b9b9 = L.marker(
+                [12.963056034818047, 77.75115103949128],
+                {}
+            ).addTo(map_a94fdbcbff159655c5a406bcac27e775);
+        
+    
+            var icon_ed6f8a9a37a5de58d0e84779fe8f3b39 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-user", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f559c8511d073547d8d49ecd4de1b9b9.setIcon(icon_ed6f8a9a37a5de58d0e84779fe8f3b39);
+        
+    
+        var popup_19724d7805e3bd35d6caf314e5bb82da = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ea5cf032fc9904501193fd9563ecad87 = $(`<div id="html_ea5cf032fc9904501193fd9563ecad87" style="width: 100.0%; height: 100.0%;"><b>You are here!</b></div>`)[0];
+                popup_19724d7805e3bd35d6caf314e5bb82da.setContent(html_ea5cf032fc9904501193fd9563ecad87);
+            
+        
+
+        marker_f559c8511d073547d8d49ecd4de1b9b9.bindPopup(popup_19724d7805e3bd35d6caf314e5bb82da)
+        ;
+
+        
+    
+    
+            var marker_7f7ad64bc072f569dd3f7fea65e5fb87 = L.marker(
+                [12.9697535, 77.7503398],
+                {}
+            ).addTo(map_a94fdbcbff159655c5a406bcac27e775);
+        
+    
+            var icon_c046b218466a3fc60c329c80d191a8b0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-cutlery", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_7f7ad64bc072f569dd3f7fea65e5fb87.setIcon(icon_c046b218466a3fc60c329c80d191a8b0);
+        
+    
+        var popup_4bc9a37bd953d66f8173fa577194637f = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_216582f1cf124e6f61d767fb8121bbd4 = $(`<div id="html_216582f1cf124e6f61d767fb8121bbd4" style="width: 100.0%; height: 100.0%;">         <h4>Mad Over Donuts</h4>         <b>Address:</b> Second Floor, Food Court, Phoenix Market City Mall, Whitefield, Bangalore<br>         <div style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">         <b>Website:</b> <a href=https://www.zomato.com/bangalore/mad-over-donuts-whitefield?context=eyJzZSI6eyJlIjpbIjE4NjI3NjIxIiwiMTg1ODI4NTUiLCIxODkwMDk5MCIsIjE4NTQ5NTA3Iiw1MzI1NiwiMTg4NjU3MDAiLCIxODg4NDA0MyIsIjE4OTAwMTM0IiwiMTg0NzY0NjciLCIxODc2NTA5NyIsIjE4ODAyNDYwIiwiMTg4ODUzNDciLCIxODc5NzY2MCIsIjE4ODYzMzE0IiwiMTg3NzcyODMiLCIxODU0MDcxMCIsIjE4NTUyNDA1IiwiMTg1MDg2MDEiLCIxODY0OTMwMSJdLCJ0IjoiRGVsaXZlcnkgUmVzdGF1cmFudHMgaW4gV2hpdGVmaWVsZCJ9fQ==>https://www.zomato.com/bangalore/mad-over-donuts-whitefield?context=eyJzZSI6eyJlIjpbIjE4NjI3NjIxIiwiMTg1ODI4NTUiLCIxODkwMDk5MCIsIjE4NTQ5NTA3Iiw1MzI1NiwiMTg4NjU3MDAiLCIxODg4NDA0MyIsIjE4OTAwMTM0IiwiMTg0NzY0NjciLCIxODc2NTA5NyIsIjE4ODAyNDYwIiwiMTg4ODUzNDciLCIxODc5NzY2MCIsIjE4ODYzMzE0IiwiMTg3NzcyODMiLCIxODU0MDcxMCIsIjE4NTUyNDA1IiwiMTg1MDg2MDEiLCIxODY0OTMwMSJdLCJ0IjoiRGVsaXZlcnkgUmVzdGF1cmFudHMgaW4gV2hpdGVmaWVsZCJ9fQ==</a></div>         <b>Phone number(s):</b> 918067266398<br>         <b>Rating:</b> 4.2/5 (372 votes) <br>         <b>Cuisine type:</b> Bakery, Desserts, Beverages<br>         <b>Price:</b> $$$</div>`)[0];
+                popup_4bc9a37bd953d66f8173fa577194637f.setContent(html_216582f1cf124e6f61d767fb8121bbd4);
+            
+        
+
+        marker_7f7ad64bc072f569dd3f7fea65e5fb87.bindPopup(popup_4bc9a37bd953d66f8173fa577194637f)
+        ;
+
+        
+    
+    
+            marker_7f7ad64bc072f569dd3f7fea65e5fb87.bindTooltip(
+                `<div>
+                     
+                <b>TOP 1: </b><i>Mad Over Donuts</i>. 
+                You will get there on foot in 9.0 minutes.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_654c9197cbcb32f6bd9cb9f796ed60a9 = L.marker(
+                [12.9712115, 77.7456548],
+                {}
+            ).addTo(map_a94fdbcbff159655c5a406bcac27e775);
+        
+    
+            var icon_03805ca123f6d6ece7a4e7486cb76592 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-cutlery", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_654c9197cbcb32f6bd9cb9f796ed60a9.setIcon(icon_03805ca123f6d6ece7a4e7486cb76592);
+        
+    
+        var popup_4c4bd160a4f54ba5b43da754cfca3567 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_8c8a706a30cf07a0a536b2a614d81e7e = $(`<div id="html_8c8a706a30cf07a0a536b2a614d81e7e" style="width: 100.0%; height: 100.0%;">         <h4>Glen's Bakehouse</h4>         <b>Address:</b> 100, Whitefield Main Road, Whitefield, Bangalore<br>         <div style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">         <b>Website:</b> <a href=https://www.zomato.com/bangalore/glens-bakehouse-whitefield?context=eyJzZSI6eyJlIjpbIjE4OTAyNjM0IiwiNTExMzkiLCI1NzU0NSIsIjE4OTAyNjk4IiwxODQ3MjE1NywiMTg1Nzg3NDAiLCIxODU5MDMxNSIsIjE4ODg1NzQ3IiwiMTg0MTQzNjciLCIxODQ5OTY5MCIsIjUxMDMwIiwiNTcwNTMiLCI1NjAwNSIsIjE4NjgyNzgzIiwiMTgzNTc2MjMiLCIxODczMzY3MiIsIjE4NTc3ODE1IiwiMTgzNzk2NTUiXSwidCI6IkRlbGl2ZXJ5IFJlc3RhdXJhbnRzIGluIEJyb29rZWZpZWxkIn19>https://www.zomato.com/bangalore/glens-bakehouse-whitefield?context=eyJzZSI6eyJlIjpbIjE4OTAyNjM0IiwiNTExMzkiLCI1NzU0NSIsIjE4OTAyNjk4IiwxODQ3MjE1NywiMTg1Nzg3NDAiLCIxODU5MDMxNSIsIjE4ODg1NzQ3IiwiMTg0MTQzNjciLCIxODQ5OTY5MCIsIjUxMDMwIiwiNTcwNTMiLCI1NjAwNSIsIjE4NjgyNzgzIiwiMTgzNTc2MjMiLCIxODczMzY3MiIsIjE4NTc3ODE1IiwiMTgzNzk2NTUiXSwidCI6IkRlbGl2ZXJ5IFJlc3RhdXJhbnRzIGluIEJyb29rZWZpZWxkIn19</a></div>         <b>Phone number(s):</b> 08048524900<br>         <b>Rating:</b> 4.2/5 (794 votes) <br>         <b>Cuisine type:</b> Bakery, Cafe, Italian, Desserts<br>         <b>Price:</b> $$$$</div>`)[0];
+                popup_4c4bd160a4f54ba5b43da754cfca3567.setContent(html_8c8a706a30cf07a0a536b2a614d81e7e);
+            
+        
+
+        marker_654c9197cbcb32f6bd9cb9f796ed60a9.bindPopup(popup_4c4bd160a4f54ba5b43da754cfca3567)
+        ;
+
+        
+    
+    
+            marker_654c9197cbcb32f6bd9cb9f796ed60a9.bindTooltip(
+                `<div>
+                     
+                <b>TOP 2: </b><i>Glen's Bakehouse</i>. 
+                You will get there on foot in 13.0 minutes.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3b64ed7e8665dead1206d0e00b8664e2 = L.marker(
+                [12.9683823, 77.7183181],
+                {}
+            ).addTo(map_a94fdbcbff159655c5a406bcac27e775);
+        
+    
+            var icon_10d6c9ff356146a084b02dca189db281 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-cutlery", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_3b64ed7e8665dead1206d0e00b8664e2.setIcon(icon_10d6c9ff356146a084b02dca189db281);
+        
+    
+        var popup_f909395947febddc50f7632fb44d21ba = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_7813ae7d6868551e28c1801d1ad1badd = $(`<div id="html_7813ae7d6868551e28c1801d1ad1badd" style="width: 100.0%; height: 100.0%;">         <h4>Breads and Banter</h4>         <b>Address:</b> 620, 1st Main Road, C Block, AECS Layout, Brookefield, Bangalore<br>         <div style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">         <b>Website:</b> <a href=https://www.zomato.com/bangalore/breads-and-banter-brookefield-bangalore?context=eyJzZSI6eyJlIjpbMTg4OTEyMzQsIjE4NzYwMDYxIiwiMTgzODczNzYiLCIxODc3ODA2NyIsIjU0MDUxIiwiMTg1NTI0NTAiLCIxODM3OTY2MyIsIjE4ODExMDQ0IiwiMTgzNzk2NjEiLCIxODI3NTAwOCIsIjE4MzkxMDIwIl0sInQiOiJDYWZcdTAwZTlzIGFuZCBEZWxpcyBpbiBCcm9va2VmaWVsZCJ9fQ==>https://www.zomato.com/bangalore/breads-and-banter-brookefield-bangalore?context=eyJzZSI6eyJlIjpbMTg4OTEyMzQsIjE4NzYwMDYxIiwiMTgzODczNzYiLCIxODc3ODA2NyIsIjU0MDUxIiwiMTg1NTI0NTAiLCIxODM3OTY2MyIsIjE4ODExMDQ0IiwiMTgzNzk2NjEiLCIxODI3NTAwOCIsIjE4MzkxMDIwIl0sInQiOiJDYWZcdTAwZTlzIGFuZCBEZWxpcyBpbiBCcm9va2VmaWVsZCJ9fQ==</a></div>         <b>Phone number(s):</b> 08049653437<br>         <b>Rating:</b> 4.2/5 (65 votes) <br>         <b>Cuisine type:</b> Cafe, Bakery, Fast Food<br>         <b>Price:</b> $$$</div>`)[0];
+                popup_f909395947febddc50f7632fb44d21ba.setContent(html_7813ae7d6868551e28c1801d1ad1badd);
+            
+        
+
+        marker_3b64ed7e8665dead1206d0e00b8664e2.bindPopup(popup_f909395947febddc50f7632fb44d21ba)
+        ;
+
+        
+    
+    
+            marker_3b64ed7e8665dead1206d0e00b8664e2.bindTooltip(
+                `<div>
+                     
+                <b>TOP 3: </b><i>Breads and Banter</i>. 
+                You will get there on foot in 43.0 minutes.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_89e63dd8104d60f8192b2e962a57d1c1 = L.marker(
+                [12.9605758, 77.6691496],
+                {}
+            ).addTo(map_a94fdbcbff159655c5a406bcac27e775);
+        
+    
+            var icon_9a487afe2c14e681d12e18a57fc9fdff = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-cutlery", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_89e63dd8104d60f8192b2e962a57d1c1.setIcon(icon_9a487afe2c14e681d12e18a57fc9fdff);
+        
+    
+        var popup_b004343c71ee8be66fbe32ae58aa9455 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_3fc228cf86272be224be750854f30012 = $(`<div id="html_3fc228cf86272be224be750854f30012" style="width: 100.0%; height: 100.0%;">         <h4>Le Gateau - The Cake Shop</h4>         <b>Address:</b> 33/4, Narayanamma Garden, 8th Cross, Konen Agrahara, Murugeshpalya, Old Airport Road, Bangalore<br>         <div style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">         <b>Website:</b> <a href=https://www.zomato.com/bangalore/le-gateau-the-cake-shop-airport-road-bangalore?context=eyJzZSI6eyJlIjpbIjE4ODkzMTY2IiwiMTgyNDY0ODgiLCIxODYyMTg4MCIsIjE4NTUxNzM5Iiw1NDMwNSwiMTg4NDA0MzAiLCI1MjU1OCIsIjE4NDIyOTI3IiwiMTgzODI5MzkiLCIxODM1OTEwOSIsIjE4NzY3MjU4IiwiMTg2MjEyNTIiLCI2MTE3MSIsIjE4NDgxOTc2IiwiMTg2NDE4NzkiLCIxODU4MDgyMyIsIjE4NzI5NTk5IiwiMTg4OTUyODYiLCIxODgwMTQ0NiJdLCJ0IjoiRGVsaXZlcnkgUmVzdGF1cmFudHMgaW4gQmVsbGFuZHVyIn19>https://www.zomato.com/bangalore/le-gateau-the-cake-shop-airport-road-bangalore?context=eyJzZSI6eyJlIjpbIjE4ODkzMTY2IiwiMTgyNDY0ODgiLCIxODYyMTg4MCIsIjE4NTUxNzM5Iiw1NDMwNSwiMTg4NDA0MzAiLCI1MjU1OCIsIjE4NDIyOTI3IiwiMTgzODI5MzkiLCIxODM1OTEwOSIsIjE4NzY3MjU4IiwiMTg2MjEyNTIiLCI2MTE3MSIsIjE4NDgxOTc2IiwiMTg2NDE4NzkiLCIxODU4MDgyMyIsIjE4NzI5NTk5IiwiMTg4OTUyODYiLCIxODgwMTQ0NiJdLCJ0IjoiRGVsaXZlcnkgUmVzdGF1cmFudHMgaW4gQmVsbGFuZHVyIn19</a></div>         <b>Phone number(s):</b> 08045128785<br>         <b>Rating:</b> 4.4/5 (536 votes) <br>         <b>Cuisine type:</b> Desserts, Bakery<br>         <b>Price:</b> $$$$</div>`)[0];
+                popup_b004343c71ee8be66fbe32ae58aa9455.setContent(html_3fc228cf86272be224be750854f30012);
+            
+        
+
+        marker_89e63dd8104d60f8192b2e962a57d1c1.bindPopup(popup_b004343c71ee8be66fbe32ae58aa9455)
+        ;
+
+        
+    
+    
+            marker_89e63dd8104d60f8192b2e962a57d1c1.bindTooltip(
+                `<div>
+                     
+                <b>TOP 4: </b><i>Le Gateau - The Cake Shop</i>. 
+                You will get there on foot in 107.0 minutes.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ad366f4485ee08857b9921bc8eaa99db = L.marker(
+                [12.9672265, 77.7472128],
+                {}
+            ).addTo(map_a94fdbcbff159655c5a406bcac27e775);
+        
+    
+            var icon_f2e90b374bdd47bd5a6b523989f1cbc5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-cutlery", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ad366f4485ee08857b9921bc8eaa99db.setIcon(icon_f2e90b374bdd47bd5a6b523989f1cbc5);
+        
+    
+        var popup_e3f5c13d4c849314fc7745688c6303bd = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_4ddc40ae2dbf6304519944dfd1e87bad = $(`<div id="html_4ddc40ae2dbf6304519944dfd1e87bad" style="width: 100.0%; height: 100.0%;">         <h4>Karachi Bakery</h4>         <b>Address:</b> 2nd Floor, Phoenix Market City, Whitefield Main Road, Whitefield, Bangalore<br>         <div style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">         <b>Website:</b> <a href=https://www.zomato.com/bangalore/karachi-bakery-whitefield?context=eyJzZSI6eyJlIjpbIjU4OTg0IiwiMTg1NDAzMjciLCIxODg2NDQxNiIsIjE4NjIyMjc2IiwxODQzMjk4MiwiMTg4OTYxNzgiLCI1MjQzNyIsIjE4NjYwOTc0IiwiMTg1NDQ0MjciLCI1Njg3MiIsIjU3NDM0IiwiMTg4OTIzNzIiLCI1NTY3NSIsIjE4NjU2MzU5IiwiMTgzMzMxNjMiLCIxODU2ODMwOSIsIjE4ODY0NDE3IiwiMTg1NTE2NzMiLCIxODI3MDIwMCIsIjE4NTgyNDQ1IiwiMTg2NzM1OTEiLCIxODk2NjY2MSIsIjYwNzM5IiwiMTg0NDEyMzAiXSwidCI6IkRlc3NlcnRzICYgQmFrZXMgaW4gV2hpdGVmaWVsZCJ9fQ==>https://www.zomato.com/bangalore/karachi-bakery-whitefield?context=eyJzZSI6eyJlIjpbIjU4OTg0IiwiMTg1NDAzMjciLCIxODg2NDQxNiIsIjE4NjIyMjc2IiwxODQzMjk4MiwiMTg4OTYxNzgiLCI1MjQzNyIsIjE4NjYwOTc0IiwiMTg1NDQ0MjciLCI1Njg3MiIsIjU3NDM0IiwiMTg4OTIzNzIiLCI1NTY3NSIsIjE4NjU2MzU5IiwiMTgzMzMxNjMiLCIxODU2ODMwOSIsIjE4ODY0NDE3IiwiMTg1NTE2NzMiLCIxODI3MDIwMCIsIjE4NTgyNDQ1IiwiMTg2NzM1OTEiLCIxODk2NjY2MSIsIjYwNzM5IiwiMTg0NDEyMzAiXSwidCI6IkRlc3NlcnRzICYgQmFrZXMgaW4gV2hpdGVmaWVsZCJ9fQ==</a></div>         <b>Phone number(s):</b> 918067266319<br>         <b>Rating:</b> 4.1/5 (42 votes) <br>         <b>Cuisine type:</b> Bakery, Desserts<br>         <b>Price:</b> $$$</div>`)[0];
+                popup_e3f5c13d4c849314fc7745688c6303bd.setContent(html_4ddc40ae2dbf6304519944dfd1e87bad);
+            
+        
+
+        marker_ad366f4485ee08857b9921bc8eaa99db.bindPopup(popup_e3f5c13d4c849314fc7745688c6303bd)
+        ;
+
+        
+    
+    
+            marker_ad366f4485ee08857b9921bc8eaa99db.bindTooltip(
+                `<div>
+                     
+                <b>TOP 5: </b><i>Karachi Bakery</i>. 
+                You will get there on foot in 8.0 minutes.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2851e29c306ad93a7b5426f3fdf8c8e6 = L.marker(
+                [12.93134285, 77.68076509999999],
+                {}
+            ).addTo(map_a94fdbcbff159655c5a406bcac27e775);
+        
+    
+            var icon_a78dedafcfdf2d37ec78dea2c1c63875 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-cutlery", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_2851e29c306ad93a7b5426f3fdf8c8e6.setIcon(icon_a78dedafcfdf2d37ec78dea2c1c63875);
+        
+    
+        var popup_62190fb493e2996d6a58d0f60794b15b = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_5f8426f0c670c2d298eab0b2f9beb046 = $(`<div id="html_5f8426f0c670c2d298eab0b2f9beb046" style="width: 100.0%; height: 100.0%;">         <h4>Happy Endings</h4>         <b>Address:</b> 164, Green Glen Layout, Opposite Little Elly, Bellandur, Bangalore<br>         <div style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">         <b>Website:</b> <a href=https://www.zomato.com/bangalore/happy-endings-bellandur?context=eyJzZSI6eyJlIjpbIjE4NjY3OTQxIiwiMTg1OTc2OTIiLCIxODM5MTAzNCIsIjE4Mzg3NDE0Iiw1MDQ2MSwiMTg1NzQyOTEiLCIxODcxODg3NCIsIjE4NzM0NTE2IiwiMTg2NDE4ODAiLCIxODI4MDU4MiIsIjE4Njg0ODMwIiwiNTg4ODIiLCIxODc1Mzg0OSIsIjE4Nzc3NzI1IiwiMTg3ODU0NTgiLCIxODU2NzQ5MCIsIjE4NzA2MTE0IiwiNTI0ODQiLCIxODcxMTIwNCIsIjE4ODE4MzUxIiwiMTg4ODAxNTYiLCIxODc5MzUyMCIsIjE4NjI4MjAxIl0sInQiOiJEZWxpdmVyeSBSZXN0YXVyYW50cyBpbiBCZWxsYW5kdXIifX0=>https://www.zomato.com/bangalore/happy-endings-bellandur?context=eyJzZSI6eyJlIjpbIjE4NjY3OTQxIiwiMTg1OTc2OTIiLCIxODM5MTAzNCIsIjE4Mzg3NDE0Iiw1MDQ2MSwiMTg1NzQyOTEiLCIxODcxODg3NCIsIjE4NzM0NTE2IiwiMTg2NDE4ODAiLCIxODI4MDU4MiIsIjE4Njg0ODMwIiwiNTg4ODIiLCIxODc1Mzg0OSIsIjE4Nzc3NzI1IiwiMTg3ODU0NTgiLCIxODU2NzQ5MCIsIjE4NzA2MTE0IiwiNTI0ODQiLCIxODcxMTIwNCIsIjE4ODE4MzUxIiwiMTg4ODAxNTYiLCIxODc5MzUyMCIsIjE4NjI4MjAxIl0sInQiOiJEZWxpdmVyeSBSZXN0YXVyYW50cyBpbiBCZWxsYW5kdXIifX0=</a></div>         <b>Phone number(s):</b> 918123367001, 919632684101<br>         <b>Rating:</b> 4.3/5 (490 votes) <br>         <b>Cuisine type:</b> Bakery, Desserts, Italian<br>         <b>Price:</b> $$$</div>`)[0];
+                popup_62190fb493e2996d6a58d0f60794b15b.setContent(html_5f8426f0c670c2d298eab0b2f9beb046);
+            
+        
+
+        marker_2851e29c306ad93a7b5426f3fdf8c8e6.bindPopup(popup_62190fb493e2996d6a58d0f60794b15b)
+        ;
+
+        
+    
+    
+            marker_2851e29c306ad93a7b5426f3fdf8c8e6.bindTooltip(
+                `<div>
+                     
+                <b>TOP 6: </b><i>Happy Endings</i>. 
+                You will get there on foot in 101.0 minutes.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1cc95f0c7e1ad08320da1963d5729b4f = L.marker(
+                [12.9853924, 77.7246128],
+                {}
+            ).addTo(map_a94fdbcbff159655c5a406bcac27e775);
+        
+    
+            var icon_b87b821f287caeb7f3db3d642241f437 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-cutlery", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_1cc95f0c7e1ad08320da1963d5729b4f.setIcon(icon_b87b821f287caeb7f3db3d642241f437);
+        
+    
+        var popup_b6b0f82b6f0eae208d433d5c506982b3 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_6255b45ef8f9faa82c4312b3c33452bd = $(`<div id="html_6255b45ef8f9faa82c4312b3c33452bd" style="width: 100.0%; height: 100.0%;">         <h4>Happy Endings</h4>         <b>Address:</b> Third Floor, Ascendas Park Square, ITPB, Whitefield, Bangalore<br>         <div style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">         <b>Website:</b> <a href=https://www.zomato.com/bangalore/happy-endings-itpl-main-road-whitefield?context=eyJzZSI6eyJlIjpbIjE4OTYyMjA4IiwiMTg2MDk0NjgiLCIxODYzMzQyMCIsIjE4NjIyNDQ4Iiw1Mjg3MCwiMTg3NTgzNzciLCIxODg3MTU0MiIsIjE4OTIxMDc4Il0sInQiOiJEZWxpdmVyeSBSZXN0YXVyYW50cyBpbiBCcm9va2VmaWVsZCJ9fQ==>https://www.zomato.com/bangalore/happy-endings-itpl-main-road-whitefield?context=eyJzZSI6eyJlIjpbIjE4OTYyMjA4IiwiMTg2MDk0NjgiLCIxODYzMzQyMCIsIjE4NjIyNDQ4Iiw1Mjg3MCwiMTg3NTgzNzciLCIxODg3MTU0MiIsIjE4OTIxMDc4Il0sInQiOiJEZWxpdmVyeSBSZXN0YXVyYW50cyBpbiBCcm9va2VmaWVsZCJ9fQ==</a></div>         <b>Phone number(s):</b> 918123367003, 08028026543<br>         <b>Rating:</b> 4.1/5 (180 votes) <br>         <b>Cuisine type:</b> Bakery, Desserts<br>         <b>Price:</b> $$</div>`)[0];
+                popup_b6b0f82b6f0eae208d433d5c506982b3.setContent(html_6255b45ef8f9faa82c4312b3c33452bd);
+            
+        
+
+        marker_1cc95f0c7e1ad08320da1963d5729b4f.bindPopup(popup_b6b0f82b6f0eae208d433d5c506982b3)
+        ;
+
+        
+    
+    
+            marker_1cc95f0c7e1ad08320da1963d5729b4f.bindTooltip(
+                `<div>
+                     
+                <b>TOP 7: </b><i>Happy Endings</i>. 
+                You will get there on foot in 46.0 minutes.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f0391234d7a09e01e81d792047df2422 = L.marker(
+                [12.9826464, 77.7260708],
+                {}
+            ).addTo(map_a94fdbcbff159655c5a406bcac27e775);
+        
+    
+            var icon_cd7d6b05656735886b0ba6d48c6b0ac7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-cutlery", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_f0391234d7a09e01e81d792047df2422.setIcon(icon_cd7d6b05656735886b0ba6d48c6b0ac7);
+        
+    
+        var popup_c0d6221abfebd798b45a98c14042aff8 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_45ccf1d2b393968d8998239ef0fde52e = $(`<div id="html_45ccf1d2b393968d8998239ef0fde52e" style="width: 100.0%; height: 100.0%;">         <h4>Cakesta</h4>         <b>Address:</b> Ascendas Park Square, ITPL Main Road, Whitefield<br>         <div style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">         <b>Website:</b> <a href=https://www.zomato.com/bangalore/cakesta-itpl-main-road-whitefield-bangalore?context=eyJzZSI6eyJlIjpbIjE4ODU2ODk1IiwiMTg1OTcwMDMiLCIxODU1OTQ3NCIsIjE4ODU1OTU2IiwxODU5MjA5NSwiMTgxMDc5OTAiLCIxODYxMzU1OSIsIjE4MzcxMjc2IiwiMTg1OTc4NTEiLCIxODM1NzU4MyIsIjE4NTQxOTA2IiwiMTg1MTY0MjQiLCIxODY1OTA5NiIsIjE4NTU4NDk0IiwiMTg1OTc3MjkiXSwidCI6IkRlbGl2ZXJ5IFJlc3RhdXJhbnRzIGluIEJyb29rZWZpZWxkIn19>https://www.zomato.com/bangalore/cakesta-itpl-main-road-whitefield-bangalore?context=eyJzZSI6eyJlIjpbIjE4ODU2ODk1IiwiMTg1OTcwMDMiLCIxODU1OTQ3NCIsIjE4ODU1OTU2IiwxODU5MjA5NSwiMTgxMDc5OTAiLCIxODYxMzU1OSIsIjE4MzcxMjc2IiwiMTg1OTc4NTEiLCIxODM1NzU4MyIsIjE4NTQxOTA2IiwiMTg1MTY0MjQiLCIxODY1OTA5NiIsIjE4NTU4NDk0IiwiMTg1OTc3MjkiXSwidCI6IkRlbGl2ZXJ5IFJlc3RhdXJhbnRzIGluIEJyb29rZWZpZWxkIn19</a></div>         <b>Phone number(s):</b> 917815070674<br>         <b>Rating:</b> 4.1/5 (119 votes) <br>         <b>Cuisine type:</b> Bakery, Desserts<br>         <b>Price:</b> $$$</div>`)[0];
+                popup_c0d6221abfebd798b45a98c14042aff8.setContent(html_45ccf1d2b393968d8998239ef0fde52e);
+            
+        
+
+        marker_f0391234d7a09e01e81d792047df2422.bindPopup(popup_c0d6221abfebd798b45a98c14042aff8)
+        ;
+
+        
+    
+    
+            marker_f0391234d7a09e01e81d792047df2422.bindTooltip(
+                `<div>
+                     
+                <b>TOP 8: </b><i>Cakesta</i>. 
+                You will get there on foot in 42.0 minutes.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_59452d6ef561f312118acfe1b3bf11fd = L.marker(
+                [12.9603548, 77.66795160000001],
+                {}
+            ).addTo(map_a94fdbcbff159655c5a406bcac27e775);
+        
+    
+            var icon_098e7829a4d175ae2faa92cd16725a34 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-cutlery", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_59452d6ef561f312118acfe1b3bf11fd.setIcon(icon_098e7829a4d175ae2faa92cd16725a34);
+        
+    
+        var popup_9d8959ed41d535b36ea6b9f19accf604 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_ae873361a19fe071fc8f35f4f0d1ae2e = $(`<div id="html_ae873361a19fe071fc8f35f4f0d1ae2e" style="width: 100.0%; height: 100.0%;">         <h4>Sweet Truth</h4>         <b>Address:</b> 147, Anjaneya Techno Park, HAL Airport Road, Old Airport Road, Bangalore<br>         <div style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">         <b>Website:</b> <a href=https://www.zomato.com/bangalore/sweet-truth-airport-road?context=eyJzZSI6eyJlIjpbIjU0MzA1IiwxODU1MTY3OSwiNTMyMjciLCI1ODQwMyIsIjE4NDYzMTk3IiwiNTcxNzkiLCIxODQ1NzYxNSIsIjE4MzY2NjcyIiwiMTg2MjE5NDIiLCIxODU3MjA4NyIsIjE4NzEzODU2IiwiMTg2NzEwNjYiXSwidCI6IkRlc3NlcnRzICYgQmFrZXMgaW4gT2xkIEFpcnBvcnQgUm9hZCJ9fQ==>https://www.zomato.com/bangalore/sweet-truth-airport-road?context=eyJzZSI6eyJlIjpbIjU0MzA1IiwxODU1MTY3OSwiNTMyMjciLCI1ODQwMyIsIjE4NDYzMTk3IiwiNTcxNzkiLCIxODQ1NzYxNSIsIjE4MzY2NjcyIiwiMTg2MjE5NDIiLCIxODU3MjA4NyIsIjE4NzEzODU2IiwiMTg2NzEwNjYiXSwidCI6IkRlc3NlcnRzICYgQmFrZXMgaW4gT2xkIEFpcnBvcnQgUm9hZCJ9fQ==</a></div>         <b>Phone number(s):</b> 917710055553<br>         <b>Rating:</b> 4.3/5 (26 votes) <br>         <b>Cuisine type:</b> Bakery, Desserts<br>         <b>Price:</b> $$$</div>`)[0];
+                popup_9d8959ed41d535b36ea6b9f19accf604.setContent(html_ae873361a19fe071fc8f35f4f0d1ae2e);
+            
+        
+
+        marker_59452d6ef561f312118acfe1b3bf11fd.bindPopup(popup_9d8959ed41d535b36ea6b9f19accf604)
+        ;
+
+        
+    
+    
+            marker_59452d6ef561f312118acfe1b3bf11fd.bindTooltip(
+                `<div>
+                     
+                <b>TOP 9: </b><i>Sweet Truth</i>. 
+                You will get there on foot in 108.0 minutes.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_115ca76199148fd51aacc0719a6e6584 = L.marker(
+                [12.9649795, 77.7487538],
+                {}
+            ).addTo(map_a94fdbcbff159655c5a406bcac27e775);
+        
+    
+            var icon_edfbd5ad673437cf851f2f8d05bd6427 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "glyphicon glyphicon-cutlery", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_115ca76199148fd51aacc0719a6e6584.setIcon(icon_edfbd5ad673437cf851f2f8d05bd6427);
+        
+    
+        var popup_f375859d9de8d63f1ee48a257a38d1d4 = L.popup({"maxWidth": 400});
+
+        
+            
+                var html_50308c7179de48730d1bbcf95ac75be2 = $(`<div id="html_50308c7179de48730d1bbcf95ac75be2" style="width: 100.0%; height: 100.0%;">         <h4>Lemon Krust</h4>         <b>Address:</b> Shop 92, RHB Colony Mahadevpura, Whitefield Main Road, Whitefield, Bangalore<br>         <div style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">         <b>Website:</b> <a href=https://www.zomato.com/bangalore/lemon-krust-whitefield?context=eyJzZSI6eyJlIjpbIjE4NjAxMzY2IiwiMTg2NDY3NjkiLCIxODQ0MzA5MiIsIjE4MzMzMTYzIiw2MDIxNSwiMTg3OTk0NDIiLCIxODgxMTk3MyIsIjE4MzA4NzcyIiwiNTI5NzciLCIxODE2MDA3OSIsIjU1MjI2IiwiNTc0MDciLCIxODg2MjMzNyIsIjE4NzQxODE2IiwiMTg2NTc4MTIiXSwidCI6IkRlbGl2ZXJ5IFJlc3RhdXJhbnRzIGluIFdoaXRlZmllbGQifX0=>https://www.zomato.com/bangalore/lemon-krust-whitefield?context=eyJzZSI6eyJlIjpbIjE4NjAxMzY2IiwiMTg2NDY3NjkiLCIxODQ0MzA5MiIsIjE4MzMzMTYzIiw2MDIxNSwiMTg3OTk0NDIiLCIxODgxMTk3MyIsIjE4MzA4NzcyIiwiNTI5NzciLCIxODE2MDA3OSIsIjU1MjI2IiwiNTc0MDciLCIxODg2MjMzNyIsIjE4NzQxODE2IiwiMTg2NTc4MTIiXSwidCI6IkRlbGl2ZXJ5IFJlc3RhdXJhbnRzIGluIFdoaXRlZmllbGQifX0=</a></div>         <b>Phone number(s):</b> 08043365266<br>         <b>Rating:</b> 4.0/5 (39 votes) <br>         <b>Cuisine type:</b> Bakery, Fast Food<br>         <b>Price:</b> $</div>`)[0];
+                popup_f375859d9de8d63f1ee48a257a38d1d4.setContent(html_50308c7179de48730d1bbcf95ac75be2);
+            
+        
+
+        marker_115ca76199148fd51aacc0719a6e6584.bindPopup(popup_f375859d9de8d63f1ee48a257a38d1d4)
+        ;
+
+        
+    
+    
+            marker_115ca76199148fd51aacc0719a6e6584.bindTooltip(
+                `<div>
+                     
+                <b>TOP 10: </b><i>Lemon Krust</i>. 
+                You will get there on foot in 4.0 minutes.
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_21c62b4ebb3ddc60a7705268979a5bc6 = L.polyline(
+                [[12.963056034818047, 77.75115103949128], [12.9697535, 77.7503398]],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": "10", "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.5, "smoothFactor": 1.0, "stroke": true, "weight": 3.5}
+            ).addTo(map_a94fdbcbff159655c5a406bcac27e775);
+        
+</script>

@@ -26,13 +26,10 @@ def price_filter(preferences:dict,df:pd.DataFrame):
     return df
 
 # Cuisine filter
-def cuisines_filter(preferences:dict,df:pd.DataFrame): 
-    
-    p = preferences["cuisine"]
-    
-    df.loc[(df.apply(lambda x: any(m in str(v)
-                               for v in x.values 
-                               for m in p), axis=1))]
+def cuisines_filter(preferences:dict,df:pd.DataFrame):
+    c = preferences["cuisine"]
+    df["cuisines"] = df["cuisines"].apply(lambda x: x if any(z in c for z in x) else None)
+    df.dropna(subset=['cuisines'], inplace=True)
     return df
 
 # Range filter
