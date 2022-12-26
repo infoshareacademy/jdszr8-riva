@@ -7,5 +7,4 @@ The application recommends restaurants to the user based on
 - popularity and rating level
 
 The app was developed based on following dataset:
-<br>
-- [Bangalore restaurant dataset](https://www.kaggle.com/datasets/himanshupoddar/zomato-bangalore-restaurants)
+[Bangalore restaurant dataset](https://www.kaggle.com/datasets/himanshupoddar/zomato-bangalore-restaurants)
