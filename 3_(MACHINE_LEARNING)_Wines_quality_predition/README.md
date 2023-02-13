@@ -1,4 +1,4 @@
-# Machine learing model that predicts wine quality
+# Machine learning model that predicts wine quality
 
 
 The model predicts wine quality based on its parameters using Support Vector Machine algorithm. <br>
@@ -11,5 +11,5 @@ Model enables the determination of lower-quality wines and maximizing profits si
 
 
 The app was developed based on following dataset:
-[Bangalore restaurant dataset](https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009)
+[Dataset](https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009)
 
