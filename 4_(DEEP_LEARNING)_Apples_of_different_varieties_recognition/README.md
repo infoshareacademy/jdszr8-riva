@@ -6,6 +6,6 @@ The model recognise apples based on its picture using Deep Learning <br>
 <br>
 
 
-The app was developed based on following dataset:
+The app was developed based on following dataset: <br>
 https://www.kaggle.com/datasets/chrisfilo/fruit-recognition
 
