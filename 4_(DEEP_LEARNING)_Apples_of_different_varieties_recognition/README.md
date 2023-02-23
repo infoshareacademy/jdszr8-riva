@@ -7,5 +7,5 @@ The model recognise apples based on its picture using Deep Learning <br>
 
 
 The app was developed based on following dataset:
-[Dataset](https://www.kaggle.com/datasets/uciml/red-wine-quality-cortez-et-al-2009)
+https://www.kaggle.com/datasets/chrisfilo/fruit-recognition
 
