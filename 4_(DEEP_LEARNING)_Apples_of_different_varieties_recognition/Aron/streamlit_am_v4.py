@@ -3,8 +3,10 @@ from streamlit_option_menu import option_menu
 import numpy as np
 import cv2
 import tensorflow as tf
-from tensorflow import keras
 import plotly.express as px
+
+st.set_page_config(layout="centered", page_title="Apple recognition", page_icon=":apple:", initial_sidebar_state="expanded")
+
 
 def import_and_color_image(image_path:str, image_cat:str):
     img=cv2.imread(image_path + image_cat + ".png")
@@ -29,13 +31,15 @@ image_path = "./pic_examples/"
 
 with st.sidebar:
     selected = option_menu(menu_title=None,
-                            options=["Model", "About", "Authors"],
-                            icons=["calculator", "clipboard", "people-fill"],
-                            default_index=0,
-                            styles={"icon": {"font-size": "25px"},
-                                    "nav-link": {"font-size": "25px", "--hover-color": "#8EAD7C"}})
+                           options=["Model", "About", "Authors"],
+                           icons=["calculator", "clipboard", "people-fill"],
+                           default_index=0,
+                           styles={"icon": {"font-size": "25px"},
+                                   "nav-link": {"font-size": "25px", "--hover-color": "#8EAD7C"}})
+       
 
 if selected == "Model":
+    
     
     title = st.container()
     subtitle = st.container()
@@ -46,13 +50,13 @@ if selected == "Model":
 
 
     with title:
-        st.markdown("<h1 style='text-align: center;'>Why don't we recognise an Apple? Let's give it a try!</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center;'>Classification of apples in a jam sorting plant</h1>", unsafe_allow_html=True)
         st.markdown("""---""")
 
 
     with subtitle:
         
-        st.markdown("<h2 style='text-align: center;'>This is how our &#127822 &#127823 categories looks like:</h1>", unsafe_allow_html=True)
+        st.markdown("<h2 style='text-align: center;'>This is how &#127822 &#127823 categories looks like:</h1>", unsafe_allow_html=True)
         
         
     with pictures_line_1:
@@ -84,7 +88,6 @@ if selected == "Model":
 
     with drop_section:
 
-    
         st.markdown('<h2 style="text-align: center;"> Insert an image for classification</h2>', unsafe_allow_html=True)
         upload_file= st.file_uploader(label="", type=['png','jpg'])
         
@@ -108,7 +111,6 @@ if selected == "Model":
         
         
     with results:
-        
         
         if upload_file is not None:
 
@@ -137,6 +139,48 @@ if selected == "Model":
 
 
 if selected == "About":
-    st.text("In progress")
-if selected == "Authors":
-    st.text("In progress")
+
+    st.markdown("# In progress")
+    st.markdown("""
+                
+                <style>
+                a {
+                color: #8EAD7C !important;
+                text-decoration: none;}
+                
+                a:hover {
+                color: #E3DED7 !important;
+                text-decoration: none;}
+                </style>
+
+                """
+                , unsafe_allow_html=True)  
+      
+    st.markdown("#### &nbsp;&nbsp;&nbsp;&nbsp; :ballot_box_with_check: &nbsp;&nbsp;&nbsp; Data source: https://www.kaggle.com/chrisfilo/fruit-recognition")
+    st.markdown("#### &nbsp;&nbsp;&nbsp;&nbsp; :ballot_box_with_check: &nbsp;&nbsp;&nbsp; Goal of deep learning project: recognition of three to all classes of apples")
+    st.markdown("#### &nbsp;&nbsp;&nbsp;&nbsp; :ballot_box_with_check: &nbsp;&nbsp;&nbsp; Goal of an app: klasyfikacja jabłek w fabryce dżemów")
+    
+    
+if selected == "Authors":    
+    st.markdown("# Project team members:")
+    
+    # streamlit requires to overwrite link color defined in html <style> section with addidional command: "!important"
+    # defining "a:hover" changes link display while hover by coursor
+    st.markdown("""
+                
+                <style>
+                a {
+                color: #8EAD7C !important;
+                font-size: 16px;
+                text-decoration: none;}
+                
+                a:hover {
+                color: #E3DED7 !important;
+                text-decoration: none;}
+                </style>
+                
+                <h4>&nbsp&nbsp&nbsp&nbsp 1. &nbsp&nbsp Natalia Szynkiewicz &nbsp&nbsp&nbsp<a href="https://github.com/natszynk" target="_blank">(go to GitHub)</a></h4>
+                <h4>&nbsp&nbsp&nbsp&nbsp 2. &nbsp&nbsp Aron Możejko &nbsp&nbsp&nbsp<a href="https://github.com/aronm88" target="_blank">(go to GitHub)</a></h4>
+                <h4>&nbsp&nbsp&nbsp&nbsp 3. &nbsp&nbsp Filip Szulc &nbsp&nbsp&nbsp<a href="https://github.com/fszulc1" target="_blank">(go to GitHub)</a></h4>
+                """
+                , unsafe_allow_html=True)
