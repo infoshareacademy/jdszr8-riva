@@ -5,11 +5,12 @@ import cv2
 import tensorflow as tf
 import plotly.express as px
 import pandas as pd
+from rembg import remove
 
 st.set_page_config(layout="centered", page_title="Apple recognition", page_icon=":apple:", initial_sidebar_state="expanded")
 
 
-def import_and_color_image(image_path:str, image_cat:str):
+def show_example_image(image_path:str, image_cat:str):
     img=cv2.imread(image_path + image_cat + ".png")
     img=cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     img=cv2.copyMakeBorder(src=img, top=5, bottom=5, left=5, right=5, borderType=cv2.BORDER_CONSTANT, value=[256, 256, 256])
@@ -22,12 +23,27 @@ def show_droped_image(img):
 
 def processed_image_for_classification(img):
     img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
-    img=cv2.resize(src=img, dsize=(258, 320), interpolation=cv2.INTER_AREA)
+    img=cv2.resize(src=img, dsize=(320, 258), interpolation=cv2.INTER_AREA)
     img=img.astype('float32')
-    img = img / 255 
-    img = np.expand_dims(img, axis=0)
+    img=img / 255 
+    img=np.expand_dims(img, axis=0)
     return img
 
+def processed_image_for_classification(img):
+    img=cv2.resize(src=img, dsize=(320, 258), interpolation=cv2.INTER_AREA)
+    img=remove(img)
+    img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+    
+    background = cv2.imread("./pic_background/background_rgb.png")
+    background = cv2.cvtColor(background, cv2.COLOR_BGR2RGB)
+    alpha=img[:,:,2]
+    alpha=cv2.merge([alpha, alpha, alpha])
+    img=np.where(alpha==(0, 0, 0), background, img)
+    
+    img=img.astype('float32')
+    img=img / 255 
+    img=np.expand_dims(img, axis=0)
+    return img
 
 image_path = "./pic_examples/"
 
@@ -66,33 +82,33 @@ if selected == "Model":
         col1, col2, col3 = st.columns(3)
         with col1:
             st.markdown('<h3 style="text-align: center;"> A</h3>', unsafe_allow_html=True)
-            st.image(image = import_and_color_image(image_path, "A"))
+            st.image(image = show_example_image(image_path, "A"))
         with col2:
             st.markdown('<h3 style="text-align: center;"> B</h3>', unsafe_allow_html=True)
-            st.image(image = import_and_color_image(image_path, "B"))
+            st.image(image = show_example_image(image_path, "B"))
         with col3:
             st.markdown('<h3 style="text-align: center;"> C</h3>', unsafe_allow_html=True)
-            st.image(image = import_and_color_image(image_path, "C"))
+            st.image(image = show_example_image(image_path, "C"))
 
 
     with pictures_line_2:
         col4, col5, col6 = st.columns(3)
         with col4:
             st.markdown('<h3 style="text-align: center;"> D</h3>', unsafe_allow_html=True)
-            st.image(image = import_and_color_image(image_path, "D"))
+            st.image(image = show_example_image(image_path, "D"))
         with col5:
             st.markdown('<h3 style="text-align: center;"> E</h3>', unsafe_allow_html=True)
-            st.image(image = import_and_color_image(image_path, "E"))
+            st.image(image = show_example_image(image_path, "E"))
         with col6:
             st.markdown('<h3 style="text-align: center;"> F</h3>', unsafe_allow_html=True)
-            st.image(image = import_and_color_image(image_path, "F"))
+            st.image(image = show_example_image(image_path, "F"))
         st.markdown("""---""")
 
 
     with drop_section:
 
         st.markdown('<h2 style="text-align: center;"> Insert an image for classification</h2>', unsafe_allow_html=True)
-        upload_file= st.file_uploader(label="", type=['png','jpg'])
+        upload_file= st.file_uploader(label="", type=['png', 'jpg', 'jpeg'])
         
 
         if upload_file is not None:
@@ -117,7 +133,7 @@ if selected == "Model":
         
         if upload_file is not None:
 
-            model=tf.keras.models.load_model("model_apples.h5", compile=False)
+            model=tf.keras.models.load_model("my_h5_model_4.h5", compile=False)
             model.compile(optimizer=tf.keras.optimizers.Adam(), loss=tf.keras.losses.CategoricalCrossentropy(), metrics=["accuracy"])
             
             y_pred = model.predict(processed_image_for_classification(img)).argmax(axis=1)
@@ -179,13 +195,13 @@ if selected == "About":
         st.markdown("<h1 style='text-align: center;'>Model description</h1>", unsafe_allow_html=True)
         st.markdown("<p style='text-align: justify; color: #E3DED7, background-color: #2D4443;'> \
                     \
-                    In this project, a precise Convolutional Neural Network (CNN) model was developed from scratch, \
+                    In this project, a precise <b><u>Convolutional Neural Network (CNN)</u></b> model was developed from scratch, \
                     without relying on any pre-trained models. \
                     The model comprises convolutional layers that process images \
                     and flatten them before further processing them with dense layers. \
-                    The Soft max function is used to determine the probability of the image belonging to a specific category, \
+                    The Soft Max function is used to determine the probability of the image belonging to a specific category, \
                     and the image is assigned accordingly. \
-                    The accuracy is the primary evaluation metric used to evaluate the performance of this model. \
+                    The <b><u>Accuracy</u></b> is the primary evaluation metric used to evaluate the performance of this model. \
                     Overall, this project showcases the impressive capabilities of CNNs in accurately classifying images.\
                     </p>"
                     , unsafe_allow_html=True)
@@ -194,7 +210,9 @@ if selected == "About":
        
        
     with model_structure:
-        st.markdown("<h1 style='text-align: center;'>Model architecture</h1>", unsafe_allow_html=True)
+        st.markdown("<h1 style='text-align: center;'>Model architecture</h1>", unsafe_allow_html=True) 
+        st.markdown("<h5 style='text-align: center;'>Number of parameters: 170 598</h5>", unsafe_allow_html=True)
+
         df = pd.read_excel("./model_structure/model_structure.xlsx", sheet_name="model_structure")
         
         # CSS that hides table index
@@ -212,7 +230,7 @@ if selected == "About":
  
     with confusion_matrix:
         st.markdown("<h1 style='text-align: center;'>Model performance</h1>", unsafe_allow_html=True)
-        st.markdown("<h3 style='text-align: center;'>Accuracy: 0.99 &#9989</h3>", unsafe_allow_html=True)
+        st.markdown("<h5 style='text-align: center;'>Accuracy: 0.99 &#9989</h5>", unsafe_allow_html=True)
         
         df_matrix = pd.read_excel("./model_structure/model_structure.xlsx", sheet_name="matrix")
 
@@ -227,6 +245,7 @@ if selected == "About":
         st.table(df_matrix.style.format({'Precision': '{:.2f}', 'Recall': '{:.2f}', 'F1-score': '{:.2f}'}))
 
         st.markdown("---")   
+    
     
 if selected == "Authors":    
     st.markdown("# Project team members:")
