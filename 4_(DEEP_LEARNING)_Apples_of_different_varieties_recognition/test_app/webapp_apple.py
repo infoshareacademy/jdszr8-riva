@@ -7,6 +7,7 @@ from rembg import remove
 import base64
 import os
 import random
+from PIL import Image
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
@@ -47,8 +48,7 @@ st.markdown('<h3 style="color:gray;"> A,B, C, D, E, F</h3>', unsafe_allow_html=T
 upload= st.file_uploader('Insert image for classification', type=['png','jpg','jpeg'])
 c1, c2= st.columns(2)
 
-
-# Docelowy fromat wszystkich zdjęć
+# Default image size
 IMG_WIDTH=320
 IMG_HEIGHT=258
 
@@ -79,17 +79,19 @@ if upload is not None:
 
     if "test" in str(upload.name):
 
-        result = im= cv2.imread(upload.name)
-        im= cv2.imread(upload.name)
-        im=cv2.resize(im,(IMG_WIDTH, IMG_HEIGHT), interpolation = cv2.INTER_AREA)
+        img= Image.open(upload)
+        img= np.asarray(img)
+        # im= cv2.imread(upload.name)
+        im=cv2.resize(img,(IMG_WIDTH, IMG_HEIGHT), interpolation = cv2.INTER_AREA)
         result = cv2.cvtColor(im,cv2.COLOR_BGR2RGB)
         im_to_display = result
 
     else:
 
-        im= cv2.imread(upload.name)
-        im=cv2.resize(im,(IMG_WIDTH, IMG_HEIGHT), interpolation = cv2.INTER_AREA)
-        im_to_display = cv2.cvtColor(im,cv2.COLOR_BGR2RGB)
+        img= Image.open(upload)
+        img= np.asarray(img)
+        im=cv2.resize(img,(IMG_WIDTH, IMG_HEIGHT), interpolation = cv2.INTER_AREA)
+        im_to_display = im
         im = remove(im)
         im = cv2.cvtColor(im,cv2.COLOR_BGR2RGB)
         
